@@ -38,12 +38,14 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
-  strangeArray.sort();
-  filteredArray = strangeArray.filter(filteredFunction);
+  
+  // function filteredFunction(value) {
+  //   return value = typeof value == "string";
+  // }
+  const filteredArray = strangeArray
+  .filter(item => typeof item === 'string')
+  .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-  function filteredFunction(value) {
-    return value = typeof value == "string";
-  }
   console.log(filteredArray);
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
   showList(filteredArray);
