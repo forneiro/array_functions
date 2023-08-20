@@ -46,4 +46,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
   console.log(filteredArray);
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  showList(filteredArray);
 });
